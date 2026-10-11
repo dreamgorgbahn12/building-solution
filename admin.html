@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building Solution | Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">BS</div>
+          <div>
+            <span class="brand-name">Building Solution</span>
+            <small>Smart construction support</small>
+          </div>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+          <a href="invoice.html">Invoice</a>
+          <a class="active" href="admin.html">Admin</a>
+        </nav>
+        <a class="btn btn-primary" href="contact.html">Get a quote</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Administrative access</span>
+          <h1>Client request dashboard</h1>
+          <p>Review incoming service requests, update statuses, and respond to clients within the target 24-hour response window.</p>
+        </div>
+      </section>
+
+      <section class="page-content">
+        <div class="container admin-shell">
+          <div class="card auth-panel" id="admin-login-panel">
+            <h3>Admin login</h3>
+            <p class="muted-text">Demo access: admin@buildingsolution.com / admin12345</p>
+            <form id="admin-login-form">
+              <div class="input-group">
+                <label for="admin-email">Email address</label>
+                <input id="admin-email" type="email" placeholder="admin@buildingsolution.com" required />
+              </div>
+              <div class="input-group">
+                <label for="admin-password">Password</label>
+                <input id="admin-password" type="password" placeholder="Enter password" required />
+              </div>
+              <button type="submit" class="btn btn-primary">Sign in</button>
+              <p id="admin-login-error" class="form-error" style="display:none;">Incorrect login details.</p>
+            </form>
+          </div>
+
+          <div class="admin-dashboard" id="admin-dashboard" style="display:none;">
+            <div class="dashboard-summary">
+              <article class="summary-card">
+                <span>Total requests</span>
+                <strong id="request-total">0</strong>
+              </article>
+              <article class="summary-card">
+                <span>New</span>
+                <strong id="request-new">0</strong>
+              </article>
+              <article class="summary-card">
+                <span>In review</span>
+                <strong id="request-review">0</strong>
+              </article>
+              <article class="summary-card">
+                <span>Closed</span>
+                <strong id="request-closed">0</strong>
+              </article>
+            </div>
+
+            <div class="card admin-panel-table">
+              <div class="panel-header">
+                <h3>Live service requests</h3>
+                <button id="admin-logout" class="btn btn-secondary" type="button">Log out</button>
+              </div>
+
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Client</th>
+                      <th>Service</th>
+                      <th>Request</th>
+                      <th>Time</th>
+                      <th>Status</th>
+                      <th>Response</th>
+                    </tr>
+                  </thead>
+                  <tbody id="request-table-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="copyright">© <span id="year"></span> Building Solution. All rights reserved.</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

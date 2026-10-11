@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building Solution | Invoice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">BS</div>
+          <div>
+            <span class="brand-name">Building Solution</span>
+            <small>Smart construction support</small>
+          </div>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+          <a class="active" href="invoice.html">Invoice</a>
+          <a href="admin.html">Admin</a>
+        </nav>
+        <a class="btn btn-primary" href="contact.html">Get a quote</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Billing</span>
+          <h1>Generate an invoice</h1>
+          <p>Create an estimate, convert it into a client-ready invoice, and save it for follow-up and payment tracking.</p>
+        </div>
+      </section>
+
+      <section class="page-content">
+        <div class="container invoice-grid">
+          <div class="card invoice-form-card">
+            <h3>Invoice details</h3>
+            <form id="invoice-form">
+              <div class="input-grid">
+                <div class="input-group">
+                  <label for="invoice-client">Client name</label>
+                  <input id="invoice-client" type="text" placeholder="Jane Smith" required />
+                </div>
+                <div class="input-group">
+                  <label for="invoice-email">Client email</label>
+                  <input id="invoice-email" type="email" placeholder="jane@example.com" required />
+                </div>
+              </div>
+
+              <div class="input-grid">
+                <div class="input-group">
+                  <label for="invoice-project">Project name</label>
+                  <input id="invoice-project" type="text" placeholder="Roof replacement" required />
+                </div>
+                <div class="input-group">
+                  <label for="invoice-service">Service type</label>
+                  <select id="invoice-service">
+                    <option>Residential build</option>
+                    <option>Commercial project</option>
+                    <option>Repair & upgrade</option>
+                    <option>Inspection</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="input-grid">
+                <div class="input-group">
+                  <label for="invoice-hours">Hours</label>
+                  <input id="invoice-hours" type="number" min="1" value="12" required />
+                </div>
+                <div class="input-group">
+                  <label for="invoice-rate">Hourly rate</label>
+                  <input id="invoice-rate" type="number" min="30" value="85" required />
+                </div>
+              </div>
+
+              <div class="input-grid">
+                <div class="input-group">
+                  <label for="invoice-discount">Discount (%)</label>
+                  <input id="invoice-discount" type="number" min="0" max="100" value="0" />
+                </div>
+                <div class="input-group">
+                  <label for="invoice-due">Due date</label>
+                  <input id="invoice-due" type="date" required />
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Generate invoice</button>
+            </form>
+          </div>
+
+          <div class="card invoice-result-card" id="invoice-result-card" style="display:none;">
+            <div class="invoice-header-row">
+              <div>
+                <span class="eyebrow invoice-eyebrow">Invoice</span>
+                <h3 id="invoice-number">INV-0000</h3>
+              </div>
+              <span id="invoice-status" class="invoice-status">Draft</span>
+            </div>
+
+            <div class="invoice-meta">
+              <p><strong>Client:</strong> <span id="result-client">-</span></p>
+              <p><strong>Project:</strong> <span id="result-project">-</span></p>
+              <p><strong>Due:</strong> <span id="result-due">-</span></p>
+            </div>
+
+            <div class="invoice-summary-list">
+              <div><span>Subtotal</span><strong id="result-subtotal">$0.00</strong></div>
+              <div><span>Discount</span><strong id="result-discount">$0.00</strong></div>
+              <div><span>Tax (8%)</span><strong id="result-tax">$0.00</strong></div>
+              <div class="grand-total"><span>Total</span><strong id="result-total">$0.00</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="copyright">© <span id="year"></span> Building Solution. All rights reserved.</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
