@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building Solution | Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">BS</div>
+          <div>
+            <span class="brand-name">Building Solution</span>
+            <small>Smart construction support</small>
+          </div>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="blog.html">Blog</a>
+          <a class="active" href="contact.html">Contact</a>
+        </nav>
+        <a class="btn btn-primary" href="contact.html">Get a quote</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Let’s talk</span>
+          <h1>Request a roof inspection or free estimate.</h1>
+          <p>Tell us about your project and a member of our team will reach out to discuss the best next steps.</p>
+        </div>
+      </section>
+
+      <section class="page-content">
+        <div class="container contact-grid">
+          <div class="card contact-card">
+            <h3>Contact details</h3>
+            <ul>
+              <li><strong>Email:</strong> hello@summitroofing.com</li>
+              <li><strong>Phone:</strong> (555) 245-1818</li>
+              <li><strong>Address:</strong> 128 Ridgeview Ave, Suite 200</li>
+              <li><strong>Hours:</strong> Mon–Sat, 8:00 AM – 6:00 PM</li>
+            </ul>
+          </div>
+
+          <div class="card form-card">
+            <h3>Send us a message</h3>
+            <form id="contact-form">
+              <div class="input-group">
+                <label for="name">Full name</label>
+                <input id="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="input-group">
+                <label for="email">Email address</label>
+                <input id="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="input-group">
+                <label for="service">Service needed</label>
+                <select id="service">
+                  <option>Residential build</option>
+                  <option>Commercial project</option>
+                  <option>Repair & upgrade</option>
+                  <option>Inspection</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label for="message">Project details</label>
+                <textarea id="message" placeholder="Tell us about your building needs..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send request</button>
+              <p id="contact-success" class="form-success" style="display:none;">Thanks! Your request has been captured and our team will contact you soon.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <h3>Building Solution</h3>
+          <p>Quality construction and property support for homes, businesses, and long-term peace of mind.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>hello@buildingsolution.com</li>
+            <li>(555) 245-1818</li>
+            <li>128 Ridgeview Ave</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">© <span id="year"></span> Building Solution. All rights reserved.</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
